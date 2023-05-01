@@ -3,6 +3,7 @@
 
 
 VideoMaster permet de traiter des vidéos en ligne de commande grâce à l'utilisation de la bibliothèque FFmpeg. Il propose plusieurs fonctionnalités pour couper, compresser, extraire l'audio et la vidéo, convertir ou ajouter un filigrane à une vidéo.
+![texte alternatif](https://raw.githubusercontent.com/Lacnard/VideoMaster/main/WindowsTerminal_ftdfSMXYvJ.png)
 
 # Prérequis
 Pour utiliser ce script, vous devez avoir ffmpeg installé sur votre ordinateur et l'ajouté à votre variable d'environnement PATH. Si ffmpeg n'est pas installé, vous pouvez le télécharger à partir du site officiel de [FFmpeg](https://ffmpeg.org/) et suivre les instructions d'installation.
