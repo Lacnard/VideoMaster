@@ -26,6 +26,7 @@ L'option "Télécharger" vous permet de télécharger des vidéos depuis un larg
    - [2] Télécharger uniquement l'audio
    - [3] Télécharger avec un compte
    - [Liste des sites pris en charge](https://github.com/yt-dlp/yt-dlp/blob/master/supportedsites.md)
+
 Suivez les instructions pour télécharger les vidéos.
 
 ### Option 2 : Outil vidéo
@@ -46,7 +47,6 @@ Suivez les instructions pour effectuer les opérations vidéo souhaitées.
 ## Notes
 
 - Assurez-vous d'avoir installé FFmpeg et yt-dlp et de les avoir configurés dans votre PATH système.
-- Certaines opérations peuvent nécessiter des dépendances supplémentaires ou une configuration spécifique de FFmpeg. Veuillez vous référer à la documentation de FFmpeg pour plus d'informations.
 
 ## Avertissement
 
