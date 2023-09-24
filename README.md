@@ -1,16 +1,16 @@
 # Script Batch pour la Gestion de Vidéos
 
-Ce script batch permet de simplifier diverses tâches liées à la gestion de vidéos, notamment le téléchargement depuis YouTube et la manipulation de fichiers vidéo à l'aide de FFmpeg.
+Ce script batch permet de simplifier diverses tâches liées à la gestion de vidéos, notamment le téléchargement depuis un grand nombre de sites et la manipulation de fichiers vidéo à l'aide de FFmpeg.
 
 ## Configuration Requise
 
 - Windows
-- FFmpeg (doit être installé et configuré dans le PATH système)
-- yt-dlp (doit être installé et configuré dans le PATH système)
+- FFmpeg (doit être installé et configuré dans le PATH)
+- yt-dlp (doit être installé et configuré dans le PATH)
 
 ## Utilisation
 
-1. Exécutez le script en double-cliquant dessus ou en utilisant la commande `script.bat` dans l'invite de commande Windows.
+1. Exécutez le script en double-cliquant dessus.
 
 2. Vous serez accueilli par un menu principal avec les options suivantes :
    - [1] Télécharger
@@ -21,11 +21,11 @@ Ce script batch permet de simplifier diverses tâches liées à la gestion de vi
 
 ### Option 1 : Télécharger
 
-L'option "Télécharger" vous permet de télécharger des vidéos depuis YouTube. Vous aurez les sous-options suivantes :
+L'option "Télécharger" vous permet de télécharger des vidéos depuis un large panel de site. Vous aurez les sous-options suivantes :
    - [1] Télécharger une vidéo
    - [2] Télécharger uniquement l'audio
    - [3] Télécharger avec un compte
-
+   - [Liste des sites pris en charge](https://github.com/yt-dlp/yt-dlp/blob/master/supportedsites.md)
 Suivez les instructions pour télécharger les vidéos.
 
 ### Option 2 : Outil vidéo
