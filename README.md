@@ -1,29 +1,53 @@
+# Script Batch pour la Gestion de Vidéos
 
-# Script de traitement vidéo
+Ce script batch permet de simplifier diverses tâches liées à la gestion de vidéos, notamment le téléchargement depuis YouTube et la manipulation de fichiers vidéo à l'aide de FFmpeg.
 
+## Configuration Requise
 
-VideoMaster permet de traiter des vidéos en ligne de commande grâce à l'utilisation de la bibliothèque FFmpeg. Il propose plusieurs fonctionnalités pour couper, compresser, extraire l'audio et la vidéo, convertir ou ajouter un filigrane à une vidéo.
-![texte alternatif](https://raw.githubusercontent.com/Lacnard/VideoMaster/main/WindowsTerminal_ftdfSMXYvJ.png)
+- Windows
+- FFmpeg (doit être installé et configuré dans le PATH système)
+- yt-dlp (doit être installé et configuré dans le PATH système)
 
-# Prérequis
-Pour utiliser ce script, vous devez avoir ffmpeg installé sur votre ordinateur et l'ajouté à votre variable d'environnement PATH. Si ffmpeg n'est pas installé, vous pouvez le télécharger à partir du site officiel de [FFmpeg](https://ffmpeg.org/) et suivre les instructions d'installation.
+## Utilisation
 
-# Menu principal 
+1. Exécutez le script en double-cliquant dessus ou en utilisant la commande `script.bat` dans l'invite de commande Windows.
 
-Au lancement du script, un menu principal est affiché avec les différentes options disponibles :
+2. Vous serez accueilli par un menu principal avec les options suivantes :
+   - [1] Télécharger
+   - [2] Outil vidéo
+   - [Q] Quitter le programme
 
-* Couper une vidéo
-* Compresser une vidéo
-* Couper et compresser une vidéo 
-* Extraire l'audio et la vidéo d'une vidéo 
-* Convertir une vidéo 
-* Ajouter un filigrane Quitter le programme 
+3. Choisissez l'option en entrant le numéro correspondant ou en appuyant sur "Q" pour quitter le programme.
 
-Pour sélectionner une option, il suffit de taper le numéro correspondant ou la lettre associée.
+### Option 1 : Télécharger
 
+L'option "Télécharger" vous permet de télécharger des vidéos depuis YouTube. Vous aurez les sous-options suivantes :
+   - [1] Télécharger une vidéo
+   - [2] Télécharger uniquement l'audio
+   - [3] Télécharger avec un compte
 
-# Conclusion
-Ce script .bat permet de traiter des vidéos en ligne de commande de manière simple et efficace grâce à la bibliothèque FFmpeg. Il est facile à utiliser et offre plusieurs fonctionnalités pratiques pour traiter des vidéos.
+Suivez les instructions pour télécharger les vidéos.
 
+### Option 2 : Outil vidéo
 
+L'option "Outil vidéo" vous permet de manipuler des vidéos à l'aide de FFmpeg. Vous aurez les sous-options suivantes :
+   - [1] Couper une vidéo
+   - [2] Compresser une vidéo
+   - [3] Couper et compresser une vidéo
+   - [4] Extraire l'audio et la vidéo d'une vidéo
+   - [5] Convertir une vidéo
+   - [6] Ajouter un filigrane
+   - [7] Convertir une vidéo en GIF
+   - [8] Convertir une vidéo en MP3
+   - [9] Fusionner deux pistes audio
 
+Suivez les instructions pour effectuer les opérations vidéo souhaitées.
+
+## Notes
+
+- Assurez-vous d'avoir installé FFmpeg et yt-dlp et de les avoir configurés dans votre PATH système.
+- Certaines opérations peuvent nécessiter des dépendances supplémentaires ou une configuration spécifique de FFmpeg. Veuillez vous référer à la documentation de FFmpeg pour plus d'informations.
+
+## Avertissement
+
+Ce script est destiné à un usage personnel et non commercial. Veuillez respecter les droits d'auteur et les conditions d'utilisation lors du téléchargement et de l'utilisation de vidéos depuis Internet.
