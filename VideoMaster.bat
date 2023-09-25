@@ -6,10 +6,12 @@ cls
     echo [1] Telecharger
     echo [2] Outil video
     echo [Q] Quitter le programme
+    echo [D] Telecharge ffmpeg et yt-dlp et ajout dans PATH
     set /p choix="Votre choix : "
         if "%choix%"=="1" goto telecharger_video
         if "%choix%"=="2" goto outil_video
         if "%choix%"=="q" goto fin
+        if "%choix%"=="d" goto install
         goto menu_principal
 :telecharger_video
 cls
@@ -17,11 +19,14 @@ cls
     echo [1] Telecharger video
     echo [2] Telecharger audio
     echo [3] Telecharger avec compte
+    echo [4] Telecharger un live depuis le debut
     echo [Q] Quitter le programme
     set /p choix="Votre choix : "
         if "%choix%"=="1" goto telecharger_video
         if "%choix%"=="2" goto telecharger_audio
         if "%choix%"=="3" goto telecharger_compte
+        if "%choix%"=="4" goto telecharger_live
+
         if "%choix%"=="q" goto fin
         goto telecharger_video
 
@@ -45,6 +50,13 @@ goto menu_principal
         yt-dlp -o "%name%.%%(ext)s" -f mp4 -u "%user%" -p "%pass%" "%input%"
     pause
 goto menu_principal
+
+:telecharger_live
+    set /p "input=Lien du live : "
+        yt-dlp -o "%(title)s.%(ext)s" -ciw --no-part --hls-use-mpegts --live-from-start "%input%"
+    pause
+goto menu_principal
+
 :outil_video
 cls
     echo Que voulez-vous faire ?
@@ -174,3 +186,22 @@ goto menu_principal
     echo Au revoir !
 pause
 exit
+
+:install
+cls
+echo Installation de FFmpeg et yt-dlp dans le chemin d'environnement (PATH)...
+rem Téléchargement de FFmpeg
+curl -LO https://ffmpeg.org/releases/ffmpeg-latest-win64.zip
+rem Téléchargement de yt-dlp
+curl -LO https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp.exe
+rem Création d'un répertoire pour stocker les outils
+mkdir tools
+rem Extraction des fichiers
+7z x ffmpeg-latest-win64.zip -otools
+move yt-dlp.exe tools\yt-dlp.exe
+rem Ajout du chemin d'environnement (PATH)
+set "newPath=%CD%\tools;%PATH%"
+setx PATH "%newPath%"
+echo Installation terminée. Veuillez redémarrer votre invite de commande pour appliquer les modifications au PATH.
+pause
+goto menu_principal
