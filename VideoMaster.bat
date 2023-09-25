@@ -190,18 +190,26 @@ exit
 :install
 cls
 echo Installation de FFmpeg et yt-dlp dans le chemin d'environnement (PATH)...
+
 rem Téléchargement de FFmpeg
 curl -LO https://ffmpeg.org/releases/ffmpeg-latest-win64.zip
+
 rem Téléchargement de yt-dlp
 curl -LO https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp.exe
+
 rem Création d'un répertoire pour stocker les outils
 mkdir tools
-rem Extraction des fichiers
-7z x ffmpeg-latest-win64.zip -otools
+
+rem Extraction des fichiers FFmpeg avec PowerShell
+powershell -command "Expand-Archive -Path '.\ffmpeg-latest-win64.zip' -DestinationPath '.\tools'"
+
+rem Déplacement de yt-dlp
 move yt-dlp.exe tools\yt-dlp.exe
+
 rem Ajout du chemin d'environnement (PATH)
 set "newPath=%CD%\tools;%PATH%"
 setx PATH "%newPath%"
+
 echo Installation terminée. Veuillez redémarrer votre invite de commande pour appliquer les modifications au PATH.
 pause
 goto menu_principal
