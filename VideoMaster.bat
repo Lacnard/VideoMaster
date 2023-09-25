@@ -194,8 +194,8 @@ echo Installation de FFmpeg et yt-dlp dans le chemin d'environnement (PATH)...
 rem Déterminez le chemin vers le répertoire %appdata%
 set "appdataDir=%appdata%\VideoMaster"
 
-rem Créez le répertoire "tools" dans %appdata%
-mkdir "%appdataDir%\tools"
+rem Créez le répertoire %appdataDir% s'il n'existe pas déjà
+if not exist "%appdataDir%" mkdir "%appdataDir%"
 
 rem Téléchargement de FFmpeg
 curl -LO https://ffmpeg.org/releases/ffmpeg-latest-win64.zip
@@ -203,14 +203,16 @@ curl -LO https://ffmpeg.org/releases/ffmpeg-latest-win64.zip
 rem Téléchargement de yt-dlp
 curl -LO https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp.exe
 
-rem Extraction des fichiers FFmpeg avec tar dans %appdata%\tools
-tar -xf ffmpeg-latest-win64.zip -C "%appdataDir%\tools"
+rem Déplacement de FFmpeg et yt-dlp dans %appdataDir%
+move ffmpeg-latest-win64.zip "%appdataDir%"
+move yt-dlp.exe "%appdataDir%"
 
-rem Déplacement de yt-dlp
-move yt-dlp.exe "%appdataDir%\tools\yt-dlp.exe"
+rem Extraction des fichiers FFmpeg dans %appdataDir%
+cd /d "%appdataDir%"
+tar -xf ffmpeg-latest-win64.zip
 
-rem Ajout du chemin d'environnement (PATH)
-set "newPath=%appdataDir%\tools;%PATH%"
+rem Ajout du chemin d'environnement (PATH) pour %appdataDir%
+set "newPath=%appdataDir%;%PATH%"
 setx PATH "%newPath%"
 
 echo Installation terminée. Veuillez redémarrer votre invite de commande pour appliquer les modifications au PATH.
