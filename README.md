@@ -51,3 +51,24 @@ Suivez les instructions pour effectuer les opérations vidéo souhaitées.
 ## Avertissement
 
 Ce script est destiné à un usage personnel et non commercial. Veuillez respecter les droits d'auteur et les conditions d'utilisation lors du téléchargement et de l'utilisation de vidéos depuis Internet.
+
+## Application Electron
+
+Une version expérimentale de VideoMaster est disponible dans le dossier `electron-app`. Cette application utilise Electron pour fournir une interface graphique simple.
+
+### Prérequis
+- Node.js
+- FFmpeg et yt-dlp disponibles dans le PATH
+
+### Lancer l'application
+```bash
+cd electron-app
+npm install
+npm start
+```
+
+Cela ouvrira une fenêtre permettant d'exécuter quelques fonctionnalités de base :
+- Téléchargement de vidéo ou d'audio
+- Conversion d'une vidéo en MP3
+- Découpage d'une vidéo
+
