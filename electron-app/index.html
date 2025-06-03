@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>VideoMaster</title>
+</head>
+<body>
+  <h1>VideoMaster</h1>
+  <label>Operation:
+    <select id="operation">
+      <option value="download-video">Download Video</option>
+      <option value="download-audio">Download Audio</option>
+      <option value="convert-mp3">Convert to MP3</option>
+      <option value="cut-video">Cut Video</option>
+    </select>
+  </label>
+  <div>
+    <label>URL:<input id="url" type="text"></label>
+  </div>
+  <div>
+    <label>Input File:<input id="input" type="text"></label>
+  </div>
+  <div>
+    <label>Output:<input id="output" type="text"></label>
+  </div>
+  <div>
+    <label>Start:<input id="start" type="text"></label>
+    <label>End:<input id="end" type="text"></label>
+  </div>
+  <button id="run">Run</button>
+  <pre id="log"></pre>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
