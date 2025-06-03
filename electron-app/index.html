@@ -2,34 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VideoMaster</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <h1>VideoMaster</h1>
-  <label>Operation:
-    <select id="operation">
-      <option value="download-video">Download Video</option>
-      <option value="download-audio">Download Audio</option>
-      <option value="convert-mp3">Convert to MP3</option>
-      <option value="cut-video">Cut Video</option>
-    </select>
-  </label>
-  <div>
+  <ul class="tabs">
+    <li data-tab="download" class="active">Download</li>
+    <li data-tab="tools">Tools</li>
+  </ul>
+  <div id="download" class="tab">
     <label>URL:<input id="url" type="text"></label>
+    <label>Download type:
+      <select id="download-op">
+        <option value="download-video">Video</option>
+        <option value="download-audio">Audio</option>
+      </select>
+    </label>
   </div>
-  <div>
-    <label>Input File:<input id="input" type="text"></label>
-  </div>
-  <div>
+  <div id="tools" class="tab hidden">
+    <label>Input:<input id="input" type="text"></label>
     <label>Output:<input id="output" type="text"></label>
-  </div>
-  <div>
-    <label>Start:<input id="start" type="text"></label>
-    <label>End:<input id="end" type="text"></label>
+    <label>Tool:
+      <select id="tool-op">
+        <option value="convert-mp3">Convert to MP3</option>
+        <option value="cut-video">Cut Video</option>
+        <option value="compress">Compress</option>
+        <option value="extract-audio">Extract Audio</option>
+      </select>
+    </label>
+    <div id="time-range" class="hidden">
+      <label>Start:<input id="start" type="text"></label>
+      <label>End:<input id="end" type="text"></label>
+    </div>
   </div>
   <button id="run">Run</button>
   <pre id="log"></pre>
-
   <script src="renderer.js"></script>
 </body>
 </html>

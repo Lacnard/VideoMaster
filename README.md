@@ -67,8 +67,8 @@ npm install
 npm start
 ```
 
-Cela ouvrira une fenêtre permettant d'exécuter quelques fonctionnalités de base :
-- Téléchargement de vidéo ou d'audio
-- Conversion d'une vidéo en MP3
-- Découpage d'une vidéo
+Cela ouvrira une interface avec deux onglets :
+- **Download** pour récupérer des vidéos ou uniquement l'audio.
+- **Tools** pour quelques commandes FFmpeg : conversion en MP3, découpage, compression ou extraction d'audio.
 
+Les commandes sélectionnées s'exécutent directement depuis l'application.
