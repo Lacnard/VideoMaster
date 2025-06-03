@@ -1,0 +1,14 @@
+body { font-family: sans-serif; margin: 0; padding: 0 1rem; }
+.tabs { list-style: none; padding: 0; display: flex; border-bottom: 1px solid #ccc; }
+.tabs li { padding: .5rem 1rem; cursor: pointer; }
+.tabs li.active { border-bottom: 2px solid #0078d7; font-weight: bold; }
+.tab { margin-top: 1rem; }
+.hidden { display: none; }
+label { display: block; margin-bottom: .5rem; }
+input, select { width: 100%; max-width: 400px; }
+button { margin-top: 1rem; }
+pre { background: #f5f5f5; padding: 1rem; margin-top: 1rem; overflow: auto; }
+@media (min-width: 600px) {
+  .tab { display: flex; flex-wrap: wrap; }
+  label { width: 45%; margin-right: 5%; }
+}
