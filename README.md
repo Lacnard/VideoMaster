@@ -67,8 +67,3 @@ npm install
 npm start
 ```
 
-Cela ouvrira une fenêtre permettant d'exécuter quelques fonctionnalités de base :
-- Téléchargement de vidéo ou d'audio
-- Conversion d'une vidéo en MP3
-- Découpage d'une vidéo
-
