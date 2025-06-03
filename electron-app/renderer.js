@@ -1,5 +1,6 @@
 const { exec } = require('child_process');
 
+
 const tabs = document.querySelectorAll('.tabs li');
 const tabViews = document.querySelectorAll('.tab');
 
@@ -71,4 +72,5 @@ document.getElementById('run').addEventListener('click', () => {
   if (cmd) {
     runCommand(cmd);
   }
+
 });
